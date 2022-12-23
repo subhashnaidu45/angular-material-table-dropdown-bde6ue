@@ -27,7 +27,7 @@ export class AppComponent {
   displayedColumns: string[] = ['name', 'gender', 'skills'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  toppingList: string[] = ['Angular', 'DotNet', 'Python'];
+  SkillList: string[] = ['Angular', 'DotNet', 'Python'];
 
   starData(value: any, element: any) {
     console.log('selected value', value);
