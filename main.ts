@@ -1,10 +1,10 @@
 import './polyfills';
 
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -42,10 +42,10 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {TableFilteringExample} from './app/table-filtering-example';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app/app-root';
 
 @NgModule({
   exports: [
@@ -86,7 +86,7 @@ import {TableFilteringExample} from './app/table-filtering-example';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-  ]
+  ],
 })
 export class DemoMaterialModule {}
 
@@ -100,15 +100,14 @@ export class DemoMaterialModule {}
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [TableFilteringExample],
-  declarations: [TableFilteringExample],
-  bootstrap: [TableFilteringExample],
-  providers: []
+  entryComponents: [AppComponent],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
+  providers: [],
 })
 export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
 
 /**  Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that

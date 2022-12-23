@@ -18,15 +18,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { name: 'Sri devi', gender: 'Female', skills: '' },
 ];
 
-/**
- * @title Table with filtering
- */
 @Component({
-  selector: 'table-filtering-example',
-  styleUrls: ['table-filtering-example.css'],
-  templateUrl: 'table-filtering-example.html',
+  selector: 'app-root',
+  styleUrls: ['app.component.css'],
+  templateUrl: 'app.component.html',
 })
-export class TableFilteringExample {
+export class AppComponent {
   displayedColumns: string[] = ['name', 'gender', 'skills'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
