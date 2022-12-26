@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 
@@ -26,7 +27,7 @@ const ELEMENT_DATA: GridElement[] = [
 export class AppComponent {
   displayedColumns: string[] = ['name', 'gender', 'skills'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
-
+  constructor(private http: HttpClient) {}
   SkillList: string[] = ['Angular', 'DotNet', 'Python'];
 
   starData(value: any, element: any) {
@@ -34,4 +35,11 @@ export class AppComponent {
     console.log('selected element', element);
     element.skills = value;
   }
+  // getData() {
+  //   const url = 'https://mocki.io/v1/6aaced4b-01dc-4c5b-a401-4e58a10ee8c7';
+  //   this.http.get(url).subscribe((res) => {
+  //     this.SkillList = res;
+  //     console.log(this.SkillList);
+  //   });
+  // }
 }
