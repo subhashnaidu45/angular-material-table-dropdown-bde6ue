@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 
-export interface PeriodicElement {
+export interface GridElement {
   name: string;
   gender: string;
   skills: string;
 }
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: GridElement[] = [
   {
     name: 'Chiranjeevi',
     gender: 'Male',
