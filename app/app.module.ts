@@ -3,6 +3,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -44,6 +45,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { GridListComponent } from './grid-list/grid-list.component';
 
 @NgModule({
   exports: [
@@ -99,7 +101,7 @@ export class DemoMaterialModule {}
     ReactiveFormsModule,
   ],
   entryComponents: [AppComponent],
-  declarations: [AppComponent],
+  declarations: [AppComponent, GridListComponent],
   bootstrap: [AppComponent],
   providers: [],
 })
