@@ -35,7 +35,9 @@ export class GridListComponent implements OnInit {
     console.log('selected element', element);
     element.skills = value;
   }
-
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
   ngOnInit() {}
 }
 // getData() {
